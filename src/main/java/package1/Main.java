@@ -58,7 +58,7 @@ public class Main {
     Predicate <Paire<Integer,Integer>> tropLourd = x-> x.snd >150;
     tropLourd.test(patrick);
 
-    Predicate <Paire<Integer,Integer>> tailleIncorrecte = tropGrand.and(tropPetit);
+    Predicate <Paire<Integer,Integer>> tailleIncorrecte = tropGrand.or(tropPetit);
     tailleIncorrecte.test(patrick);
 
     Predicate <Paire<Integer,Integer>> tailleCorrecte = tropGrand.negate().and(tropPetit.negate());
